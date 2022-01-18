@@ -44,5 +44,5 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
 }
 
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
-    plikZUzytkownikami.wczytajUzytkownikowZPliku(uzytkownicy);
+    plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
