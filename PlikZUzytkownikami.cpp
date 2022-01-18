@@ -49,29 +49,22 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku() {
             uzytkownik = pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami);
             uzytkownicy.push_back(uzytkownik);
         }
-
     }
     plikTekstowy.close();
 
     return uzytkownicy;
 }
 
-Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
-{
+Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami) {
     Uzytkownik uzytkownik;
     string pojedynczaDanaUzytkownika = "";
     int numerPojedynczejDanejUzytkownika = 1;
 
-    for (int pozycjaZnaku = 0; pozycjaZnaku < daneJednegoUzytkownikaOddzielonePionowymiKreskami.length(); pozycjaZnaku++)
-    {
-        if (daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku] != '|')
-        {
+    for (int pozycjaZnaku = 0; pozycjaZnaku < daneJednegoUzytkownikaOddzielonePionowymiKreskami.length(); pozycjaZnaku++) {
+        if (daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku] != '|') {
             pojedynczaDanaUzytkownika += daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku];
-        }
-        else
-        {
-            switch(numerPojedynczejDanejUzytkownika)
-            {
+        } else {
+            switch(numerPojedynczejDanejUzytkownika) {
             case 1:
                 uzytkownik.ustawId(atoi(pojedynczaDanaUzytkownika.c_str()));
                 break;

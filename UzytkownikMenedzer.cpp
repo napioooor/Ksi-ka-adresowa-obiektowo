@@ -64,7 +64,6 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
 }
 
 int UzytkownikMenedzer::logowanieUzytkownika(){
-    Uzytkownik uzytkownik;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
