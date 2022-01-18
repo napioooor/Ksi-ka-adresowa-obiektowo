@@ -43,6 +43,14 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
     return false;
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
-    plikZUzytkownikami.wczytajUzytkownikowZPliku();
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}
+
+void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
+    for(int i = 0; i < uzytkownicy.size(); i++) {
+        cout << uzytkownicy[i].pobierzId() << endl;
+        cout << uzytkownicy[i].pobierzLogin() << endl;
+        cout << uzytkownicy[i].pobierzHaslo() << endl;
+    }
 }
