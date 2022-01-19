@@ -47,16 +47,8 @@ void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
-void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
-    for(int i = 0; i < uzytkownicy.size(); i++) {
-        cout << uzytkownicy[i].pobierzId() << endl;
-        cout << uzytkownicy[i].pobierzLogin() << endl;
-        cout << uzytkownicy[i].pobierzHaslo() << endl;
-    }
-}
-
-void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int id){
-    idZalogowanegoUzytkownika = id;
+void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweId){
+    idZalogowanegoUzytkownika = noweId;
 }
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){

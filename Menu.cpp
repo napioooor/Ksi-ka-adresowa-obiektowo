@@ -28,30 +28,25 @@ void Menu::uruchomMenu(UzytkownikMenedzer uzytkownikMenedzer){
         }
         else
         {
-
-            /*if (adresaci.empty() == true)
-                // Pobieramy idOstatniegoAdresata, po to aby zoptymalizowac program.
-                // Dzieki temu, kiedy uztykwonik bedzie dodawal nowego adresata
-                // to nie bedziemy musieli jeszcze raz ustalac idOstatniegoAdresata
-                idOstatniegoAdresata = wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);*/
+            AdresatMenedzer adresatMenedzer("Adresaci.txt", uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika(), 1);
 
             wybor = wybierzOpcjeZMenuUzytkownika();
 
             switch (wybor)
             {
-            /*case '1':
-                idOstatniegoAdresata = dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+            case '1':
+                adresatMenedzer.dodajAdresata();
                 break;
-            case '2':
+            /*case '2':
                 wyszukajAdresatowPoImieniu(adresaci);
                 break;
             case '3':
                 wyszukajAdresatowPoNazwisku(adresaci);
-                break;
+                break;*/
             case '4':
-                wyswietlWszystkichAdresatow(adresaci);
+                adresatMenedzer.wyswietlWszystkichAdresatow();
                 break;
-            case '5':
+            /*case '5':
                 idUsunietegoAdresata = usunAdresata(adresaci);
                 idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                 break;
