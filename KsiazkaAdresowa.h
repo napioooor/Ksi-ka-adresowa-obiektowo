@@ -17,7 +17,6 @@ public:
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
         menu.uruchomMenu(uzytkownikMenedzer);
     };
-    void wypiszWszystkichUzytkownikow();
 };
 
 #endif
