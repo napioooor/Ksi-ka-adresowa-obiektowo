@@ -57,10 +57,10 @@ void Menu::uruchomMenu(UzytkownikMenedzer uzytkownikMenedzer){
                 break;
             case '6':
                 edytujAdresata(adresaci);
-                break;
-            case '7':
-                zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
                 break;*/
+            case '7':
+                uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+                break;
             case '8':
                 uzytkownikMenedzer.ustawIdZalogowanegoUzytkownika(0);
                 //adresaci.clear();
