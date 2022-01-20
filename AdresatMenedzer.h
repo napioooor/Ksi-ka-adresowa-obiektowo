@@ -13,9 +13,9 @@
 using namespace std;
 
 class AdresatMenedzer{
-    int idZalogowanegoUzytkownika;
-    int idOstatniegoAdresata;
     PlikZAdresatami plikZAdresatami;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
+    int idOstatniegoAdresata;
 
     vector <Adresat> adresaci;
 
@@ -24,14 +24,11 @@ class AdresatMenedzer{
     void wczytajAdresatowZPliku();
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami, int id1, int id2) : plikZAdresatami(nazwaPlikuZAdresatami) {
-        idZalogowanegoUzytkownika = id1;
-        idOstatniegoAdresata = id2;
-
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+        : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika) {
         if (adresaci.empty() == true)
             wczytajAdresatowZPliku();
     };
-    ~AdresatMenedzer();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
 

@@ -28,7 +28,7 @@ void Menu::uruchomMenu(UzytkownikMenedzer uzytkownikMenedzer){
         }
         else
         {
-            AdresatMenedzer adresatMenedzer("Adresaci.txt", uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika(), 1);
+            AdresatMenedzer adresatMenedzer("Adresaci.txt", uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
 
             wybor = wybierzOpcjeZMenuUzytkownika();
 

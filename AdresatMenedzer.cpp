@@ -1,11 +1,7 @@
 #include "AdresatMenedzer.h"
 
-AdresatMenedzer::~AdresatMenedzer(){
-    adresaci.clear();
-}
-
 int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika(){
-    return idZalogowanegoUzytkownika;
+    return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
 
 void AdresatMenedzer::wczytajAdresatowZPliku(){
@@ -37,7 +33,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
     Adresat adresat;
 
     adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());

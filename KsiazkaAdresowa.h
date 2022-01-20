@@ -14,7 +14,6 @@ class KsiazkaAdresowa {
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami, 0){
-        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
         menu.uruchomMenu(uzytkownikMenedzer);
     };
 };
