@@ -20,6 +20,7 @@ class PlikZAdresatami : public PlikTekstowy{
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat &adresat);
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    void edytujWybranaLinieWPliku(int idAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
 
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami) {};
@@ -27,6 +28,7 @@ public:
     void dopiszAdresataDoPliku(Adresat &adresat);
     void usunWybranaLinieWPliku(int idAdresata);
     int pobierzZPlikuIdOstatniegoAdresata();
+    void zaktualizujDaneWybranegoAdresata(Adresat &adresat, int idEdytowanegoAdresata);
 };
 
 #endif
